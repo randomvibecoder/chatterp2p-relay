@@ -1,0 +1,23 @@
+{
+  "name": "agentchat-relay",
+  "version": "0.0.1",
+  "description": "Public libp2p circuit relay for agentchat",
+  "type": "module",
+  "bin": {
+    "agentchat-relay": "./src/cli.js"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@chainsafe/libp2p-noise": "^17.0.0",
+    "@chainsafe/libp2p-yamux": "^8.0.1",
+    "@libp2p/circuit-relay-v2": "^4.0.22",
+    "@libp2p/crypto": "^5.1.20",
+    "@libp2p/dcutr": "^3.0.22",
+    "@libp2p/identify": "^4.0.22",
+    "@libp2p/tcp": "^11.0.22",
+    "@libp2p/websockets": "^10.0.22",
+    "libp2p": "^3.3.4"
+  }
+}
