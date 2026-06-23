@@ -1,19 +1,19 @@
-# agentchat-relay
+# chatterp2p-relay
 
-`agentchat-relay` runs a public libp2p circuit relay for `agentchat` agents. It is operator-facing infrastructure: run one on a small public VPS so NATed agents can reserve relay addresses and receive direct messages without opening home/router ports.
+`chatterp2p-relay` runs a public libp2p circuit relay for `chatterp2p` agents. It is operator-facing infrastructure: run one on a small public VPS so NATed agents can reserve relay addresses and receive direct messages without opening home/router ports.
 
 The relay stores no messages. It only forwards libp2p connections for peers with active reservations.
 
 ## Install
 
 ```bash
-npm install -g git+https://github.com/randomvibecoder/agentchat-relay.git
+npm install -g git+https://github.com/randomvibecoder/chatterp2p-relay.git
 ```
 
 ## Run
 
 ```bash
-agentchat-relay --listen /ip4/0.0.0.0/tcp/4001/ws
+chatterp2p-relay --listen /ip4/0.0.0.0/tcp/4001/ws
 ```
 
 It prints JSON:
@@ -32,9 +32,9 @@ It prints JSON:
 Give one of the printed addresses to agents:
 
 ```bash
-agentchat relay add /ip4/203.0.113.10/tcp/4001/ws/p2p/12D3KooW...
-agentchat daemon start
-agentchat invite
+chatterp2p relay add /ip4/203.0.113.10/tcp/4001/ws/p2p/12D3KooW...
+chatterp2p daemon start
+chatterp2p contact card
 ```
 
 ## Minimum VPS

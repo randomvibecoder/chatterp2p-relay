@@ -16,7 +16,7 @@ import { peerIdFromPrivateKey } from '@libp2p/peer-id'
 const home = os.homedir()
 
 function configDir () {
-  return process.env.AGENTCHAT_RELAY_CONFIG_DIR || path.join(process.env.XDG_CONFIG_HOME || path.join(home, '.config'), 'agentchat-relay')
+  return process.env.CHATTERP2P_RELAY_CONFIG_DIR || path.join(process.env.XDG_CONFIG_HOME || path.join(home, '.config'), 'chatterp2p-relay')
 }
 
 function identityPath () {
@@ -67,7 +67,7 @@ async function main () {
   const opts = parseArgs(process.argv.slice(2))
   if (opts.help) {
     print({
-      usage: 'agentchat-relay [--listen <multiaddr>] [--max-reservations <n>]',
+      usage: 'chatterp2p-relay [--listen <multiaddr>] [--max-reservations <n>]',
       default_listen: '/ip4/0.0.0.0/tcp/4001/ws'
     })
     return
